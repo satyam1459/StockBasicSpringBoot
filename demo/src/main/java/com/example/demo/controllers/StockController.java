@@ -17,6 +17,11 @@ public class StockController {
     @Autowired
     StockService stockService;
 
+    @GetMapping()
+    public String getAws(){
+        return "Welcome to AWS";
+    }
+
     //get stocks by type
     @GetMapping(value = "/type/{stockType}")
     public List<Stock> getStocksBasedOnType(@PathVariable StockType stockType)
